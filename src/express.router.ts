@@ -1,5 +1,5 @@
-import { Express, NextFunction, Request, Response, Router } from 'express';
-import HomeController from './controller/home.controller';
+import { Express, NextFunction, Request, Response, Router } from "express";
+import HomeController from "./controller/home.controller";
 
 export default class ExpressRouter {
   public router: Router;
@@ -11,7 +11,7 @@ export default class ExpressRouter {
   }
 
   public init(): void {
-    this.router.get('/', HomeController.getDefault);
-    this.app.use('/', this.router);
+    this.router.get("/", HomeController);
+    this.app.use("/", this.router);
   }
 }
